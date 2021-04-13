@@ -54,10 +54,15 @@ class _JobListState extends State<JobList> {
                 top: 15.0,
                 left: 20.0,
               ),
-              child: Icon(
-                Icons.arrow_back,
-                size: totalHeight * 0.04,
-                color: Colors.white,
+              child: InkWell(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: Icon(
+                  Icons.arrow_back,
+                  size: totalHeight * 0.04,
+                  color: Colors.white,
+                ),
               ),
             ),
             backgroundColor: Color.fromRGBO(65, 148, 131, 1),
@@ -105,13 +110,12 @@ class _JobListState extends State<JobList> {
                   }
                   return JobCard(
                     context: context,
-                    jobTitle: jobList["jobs_results"][i]["title"]
-                        .toString()
-                        .substring(0, 10),
-                    jobLocation: jobList["jobs_results"][i]["description"]
-                        .toString()
-                        .substring(0, 10),
+                    jobTitle: jobList["jobs_results"][i]["title"].toString(),
+                    companyName:
+                        jobList["jobs_results"][i]["company_name"].toString(),
                     jobID: jobList["jobs_results"][i]["job_id"],
+                    jobDesc:
+                        jobList["jobs_results"][i]["description"].toString(),
                   );
                 },
               )

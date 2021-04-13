@@ -9,6 +9,13 @@ class SearchPage extends StatefulWidget {
 class _SearchPageState extends State<SearchPage> {
   TextEditingController jobController = TextEditingController();
   TextEditingController locationController = TextEditingController();
+
+  void clearCache() {
+    print("clearing ! ");
+    jobController.clear();
+    locationController.clear();
+  }
+
   @override
   Widget build(BuildContext context) {
     double totalHeight = MediaQuery.of(context).size.height;
@@ -139,6 +146,7 @@ class _SearchPageState extends State<SearchPage> {
                           seachedLocation: locationController.value.text),
                     ),
                   );
+
                   // jobController.clear();
                   // locationController.clear();
                 },

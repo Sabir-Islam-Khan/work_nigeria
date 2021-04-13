@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:work_nigeria/Screens/SearchPage.dart';
 
 void main() {
@@ -15,6 +14,7 @@ class _WorkNigeriaState extends State<WorkNigeria> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: SearchPage(),
     );
   }

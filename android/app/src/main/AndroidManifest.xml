@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="AsteriskLab.work_nigeria">
+   <uses-permission android:name="android.permission.INTERNET" />
    <application
         android:label="work_nigeria"
         android:icon="@mipmap/ic_launcher">
